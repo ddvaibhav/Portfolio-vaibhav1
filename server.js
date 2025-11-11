@@ -46,16 +46,15 @@ ${message}
   };
 
   transporter.sendMail(mailOptions, (error) => {
-    if (error) {
-      console.log(error);
-      return res.send("Failed to send ❌");
-    }
+    if (error) return res.send("Failed to send ❌");
     return res.send("Message Sent Successfully ✅");
   });
 });
 
-// ✅ Render PORT fix — MOST IMPORTANT
+// ✅ ✅ ✅ सबसे important part
 const PORT = process.env.PORT || 3000;
+
+// ✅ ✅ ✅ Render साठी HTTPS only port binding
 app.listen(PORT, () => {
   console.log("✅ Server running on PORT:", PORT);
 });
