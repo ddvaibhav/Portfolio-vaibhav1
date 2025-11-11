@@ -7,15 +7,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ Serve all static files
-app.use(express.static(__dirname));
+// ✅ Serve all frontend files from "public" folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // ✅ Home route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// ✅ Gmail SMTP (App Password Required)
+// ✅ Gmail SMTP Transport
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// ✅ API route
+// ✅ API Route
 app.post("/sendmail", (req, res) => {
   const { name, email, phone, message } = req.body;
 
@@ -33,16 +33,14 @@ app.post("/sendmail", (req, res) => {
     replyTo: email,
     to: "vaibhavdaspute775@gmail.com",
     subject: "Portfolio Inquiry - Vaibhav Daspute",
-    text: `
-Portfolio Inquiry Received
+    text: `Portfolio Inquiry Received
 
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
 
 Message:
-${message}
-`
+${message}`
   };
 
   transporter.sendMail(mailOptions, (error) => {
@@ -51,10 +49,6 @@ ${message}
   });
 });
 
-// ✅ ✅ ✅ सबसे important part
+// ✅ Use PORT from Render or fallback
 const PORT = process.env.PORT || 3000;
-
-// ✅ ✅ ✅ Render साठी HTTPS only port binding
-app.listen(PORT, () => {
-  console.log("✅ Server running on PORT:", PORT);
-});
+app.listen(PORT, () => console.log("Server running on PORT:", PORT));
