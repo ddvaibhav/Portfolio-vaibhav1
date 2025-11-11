@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="vaibhav daspute, portfolio, full stack developer, projects, resume">
+  <meta name="description" content="Welcome to Vaibhav's Portfolio. Full-Stack Web Developer and BCS Student">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link id="favicon" rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+
+  <title>Portfolio | Vaibhav Daspute</title>
+
+  <style>
+    .experience .timeline .container { padding: 10px 0 !important; margin-bottom: 10px; }
+    .experience .content { padding: 15px; }
+    .experience .desc p { font-size: 14px; margin: 4px 0; }
+
+    .certificates .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+    .certificates .box {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false">
+
+  <!-- Header -->
+  <header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Vaibhav</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home" id="home">
+    <div id="particles-js"></div>
+    <div class="content">
+      <h2>Hi There,<br> I'm Vaibhav <span>Daspute</span></h2>
+      <p>I am into <span class="typing-text"></span></p>
+      <a href="#about" class="btn"><span>About Me</span> <i class="fas fa-arrow-circle-down"></i></a>
+
+      <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a class="github" href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="image"><img draggable="false" class="tilt" src="./assets/images/hero.png" alt=""></div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    <div class="row">
+      <div class="image"><img draggable="false" class="tilt" src="./assets/images/Vaibhav_d.jpeg" alt=""></div>
+
+      <div class="content">
+        <h3>I'm Vaibhav</h3>
+        <span class="tag">Full Stack Developer</span>
+        <p>I am a Full-Stack developer based in Pune, India, currently pursuing BCS at SPPU. Passionate about building scalable MERN applications.</p>
+
+        <div class="box-container">
+          <div class="box">
+            <p><span>Email:</span> vaibhavdaspute775@gmail.com</p>
+            <p><span>Location:</span> Ahilyanagar, India - 414001</p>
+          </div>
+        </div>
+
+        <div class="resumebtn">
+          <a href="https://drive.google.com/file/d/1fcvGrKgvDZr5qDXfhncY1WqccAGDXyhI/view?" target="_blank" class="btn">
+            <span>Resume</span> <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+    <div class="container">
+      <div class="row" id="skillsContainer">
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/html-5.png"><span>HTML</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/css3.png"><span>CSS</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/javascript.png"><span>JavaScript</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/react-native.png"><span>React</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/nodejs.png"><span>Node.js</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/mongodb.png"><span>MongoDB</span></div></div>
+        <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/github.png"><span>GitHub</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education" id="education">
+    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <div class="image"><img draggable="false" src="./assets/images/educat/college.jpg" alt=""></div>
+        <div class="content">
+          <h3>Bachelor of Computer Science</h3>
+          <p>New Arts Commerce & Science College Ahilyanagar</p>
+          <h4>2023 - 2025 | Pursuing</h4>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image"><img draggable="false" src="./assets/images/educat/school.jpg" alt=""></div>
+        <div class="content">
+          <h3>HSC Science | Informatics Practices</h3>
+          <p>Navjeevan Junior College Dahigoan-ne</p>
+          <h4>2022 - 2023 | Completed</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ UPDATED PROJECTS (Code Button Removed) -->
+  <section class="work" id="work">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+    <div class="box-container">
+
+      <div class="box tilt">
+        <img draggable="false" src="" alt="">
+        <div class="content">
+          <div class="tag"><h3>Portfolio Website</h3></div>
+          <div class="desc">
+            <p>A personal portfolio showcasing my skills, projects, and achievements.</p>
+            <div class="btns">
+              <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box tilt">
+        <img draggable="false" src="" alt="">
+        <div class="content">
+          <div class="tag"><h3>E-Commerce App</h3></div>
+          <div class="desc">
+            <p>JIo mart</p>
+            <div class="btns">
+              <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+    <div class="timeline">
+
+      <div class="container right">
+        <div class="content">
+          <div class="tag"><h2>Self Employed</h2></div>
+          <div class="desc">
+            <h3>Full Stack Developer</h3>
+            <p>Oct 2024 - Present</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <div class="tag"><h2>Internship - A2Z IT Hub, Ahmednagar</h2></div>
+          <div class="desc">
+            <h3>Full Stack Developer Intern</h3>
+            <p>July 2024 - Sept 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <div class="tag"><h2>Internship - A2Z Tech</h2></div>
+          <div class="desc">
+            <h3>Frontend Developer Intern</h3>
+            <p>Jan 2024 - June 2024</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="certificates" id="certificates">
+    <h2 class="heading"><i class="fas fa-certificate"></i>Certificates</h2>
+    <div class="box-container">
+      <div class="box"><h3>Full Stack Development</h3><p>MERN stack - Udemy</p><span>March 2024</span></div>
+      <div class="box"><h3>JavaScript Mastery</h3><p>CodeAcademy</p><span>Jan 2024</span></div>
+      <div class="box"><h3>React Developer</h3><p>Coursera</p><span>Dec 2023</span></div>
+      <div class="box"><h3>Node.js Backend</h3><p>Udemy</p><span>Nov 2023</span></div>
+      <div class="box"><h3>MongoDB Essentials</h3><p>MongoDB University</p><span>Oct 2023</span></div>
+      <div class="box"><h3>HTML, CSS & Bootstrap</h3><p>FreeCodeCamp</p><span>Sep 2023</span></div>
+      <div class="box"><h3>Git & GitHub</h3><p>Coursera</p><span>Aug 2023</span></div>
+      <div class="box"><h3>DSA</h3><p>HackerRank</p><span>May 2023</span></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+    <div class="container">
+      <div class="content">
+
+        <div class="image-box"><img draggable="false" src="./assets/images/contact1.png" alt=""></div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <div class="field"><input type="text" name="name" placeholder="Name" required><i class="fas fa-user"></i></div>
+            <div class="field"><input type="email" name="email" placeholder="Email" required><i class="fas fa-envelope"></i></div>
+            <div class="field"><input type="text" name="phone" placeholder="Phone"><i class="fas fa-phone-alt"></i></div>
+            <div class="message"><textarea name="message" placeholder="Message" required></textarea><i class="fas fa-comment-dots"></i></div>
+          </div>
+
+          <div class="button-area"><button type="submit">Submit <i class="fa fa-paper-plane"></i></button></div>
+          <div id="status" style="margin-top:10px;"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ✅ UPDATED SCRIPT BELOW -->
+<script>
+  document.getElementById("contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const statusBox = document.getElementById("status");
+    statusBox.innerHTML = "Sending...";
+
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value,
+      message: this.message.value
+    };
+
+    try {
+      const res = await fetch("/sendmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      const text = await res.text();
+
+      if (text.toLowerCase().includes("success") || res.status === 200) {
+        statusBox.style.color = "lightgreen";
+        statusBox.innerHTML = "✅ Message Sent Successfully!";
+        this.reset();
+      } else {
+        statusBox.style.color = "red";
+        statusBox.innerHTML = "❌ Failed to send message.";
+      }
+
+    } catch (error) {
+      statusBox.style.color = "red";
+      statusBox.innerHTML = "❌ Server Error. Try again later.";
+    }
+  });
+</script>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box"><h3>Vaibhav's Portfolio</h3><p>Thank you for visiting my portfolio. Let's connect!</p></div>
+
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> About</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Skills</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> Education</a>
+        <a href="#work"><i class="fas fa-chevron-circle-right"></i> Work</a>
+        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> Experience</a>
+      </div>
+
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-phone"></i> +91 9209140889</p>
+        <p><i class="fas fa-envelope"></i> vaibhavdaspute775@gmail.com</p>
+        <p><i class="fas fa-map-marked-alt"></i> Ahilyanagar, India-414001</p>
+      </div>
+    </div>
+
+    <h1 class="credit">Designed by <a href="#">Vaibhav Daspute</a></h1>
+  </section>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./assets/js/script.js"></script>
+
+</body>
+</html>

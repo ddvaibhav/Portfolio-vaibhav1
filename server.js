@@ -7,48 +7,39 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ Serve all frontend files from "public" folder
-app.use(express.static(path.join(__dirname, "public")));
+// ✅ Serve static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname)));
 
 // ✅ Home route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// ✅ Gmail SMTP Transport
+// ✅ Nodemailer setup
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "vaibhavdaspute775@gmail.com",
-    pass: "wwvk jhdz mtzf rtcn"
+    pass: "wwvk jhdz mtzf rtcn" // App password
   }
 });
 
-// ✅ API Route
+// ✅ API route
 app.post("/sendmail", (req, res) => {
   const { name, email, phone, message } = req.body;
-
   const mailOptions = {
     from: "vaibhavdaspute775@gmail.com",
     replyTo: email,
     to: "vaibhavdaspute775@gmail.com",
-    subject: "Portfolio Inquiry - Vaibhav Daspute",
-    text: `Portfolio Inquiry Received
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}`
+    subject: "Portfolio Inquiry",
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`
   };
-
-  transporter.sendMail(mailOptions, (error) => {
-    if (error) return res.send("Failed to send ❌");
-    return res.send("Message Sent Successfully ✅");
+  transporter.sendMail(mailOptions, (err) => {
+    if(err) return res.send("Failed ❌");
+    return res.send("Sent ✅");
   });
 });
 
-// ✅ Use PORT from Render or fallback
+// ✅ Dynamic port for Render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log("Server running on PORT:", PORT));
