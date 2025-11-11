@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ Serve all static files (CSS, JS, images)
+// ✅ Serve all static files
 app.use(express.static(__dirname));
 
 // ✅ Home route
@@ -15,24 +15,24 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// ✅ Gmail SMTP Transport
+// ✅ Gmail SMTP (App Password Required)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "vaibhavdaspute775@gmail.com",   // ✅ तुझा Gmail
-    pass: "wwvk jhdz mtzf rtcn"            // ✅ Gmail App Password
+    user: "vaibhavdaspute775@gmail.com",
+    pass: "wwvk jhdz mtzf rtcn"
   }
 });
 
-// ✅ API Route
+// ✅ API route
 app.post("/sendmail", (req, res) => {
   const { name, email, phone, message } = req.body;
 
   const mailOptions = {
-    from: "vaibhavdaspute775@gmail.com",          // ✅ FROM must be YOUR Gmail
-    replyTo: email,                                // ✅ User ला reply यावर जाईल
-    to: "vaibhavdaspute775@gmail.com",             // ✅ मेल इथे येणार
-    subject: "Portfolio Inquiry - Vaibhav Daspute", // ✅ तुझा मागितलेला subject
+    from: "vaibhavdaspute775@gmail.com",
+    replyTo: email,
+    to: "vaibhavdaspute775@gmail.com",
+    subject: "Portfolio Inquiry - Vaibhav Daspute",
     text: `
 Portfolio Inquiry Received
 
@@ -54,7 +54,8 @@ ${message}
   });
 });
 
-// ✅ Start Server
-app.listen(1000, () => {
-  console.log("Server running on http://localhost:1000");
+// ✅ Render PORT fix — MOST IMPORTANT
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("✅ Server running on PORT:", PORT);
 });
